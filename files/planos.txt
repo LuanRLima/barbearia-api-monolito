@@ -1,0 +1,2 @@
+Plano Bronze, Plano básico com descontos simples, 100.0, 10.0
+Plano Prata, Plano intermediário com mais benefícios, 150.0, 20.0

@@ -1,0 +1,2 @@
+1, 30.0, Cartão de Crédito, Pago, 2024-11-20
+2, 50.0, Dinheiro, Pendente, null

@@ -1,0 +1,85 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-11-18T20:19:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.7.0",
+  "resources": [
+    {
+      "_id": "wrk_historico_servico_api",
+      "created": 1668677140000,
+      "description": "HistoricoServico API for Barbearia API",
+      "modified": 1668677140000,
+      "name": "HistoricoServico API",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_historico_servico_api",
+      "parentId": "wrk_historico_servico_api",
+      "modified": 1668677140000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080/api"
+      },
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_historico_servicos",
+      "parentId": "wrk_historico_servico_api",
+      "created": 1668677140000,
+      "modified": 1668677140000,
+      "name": "Historico Servicos",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_get_all_historico_servicos",
+      "parentId": "fld_historico_servicos",
+      "created": 1668677140000,
+      "modified": 1668677140000,
+      "name": "Get All Historico Servicos",
+      "method": "GET",
+      "url": "{{ base_url }}/historicoservicos",
+      "headers": [],
+      "body": {},
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_historico_servico_by_id",
+      "parentId": "fld_historico_servicos",
+      "created": 1668677140000,
+      "modified": 1668677140000,
+      "name": "Get HistoricoServico by ID",
+      "method": "GET",
+      "url": "{{ base_url }}/historicoservicos/:id",
+      "headers": [],
+      "body": {},
+      "parameters": [
+        {
+          "name": "id",
+          "value": "",
+          "id": "param_historico_servico_id"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_create_historico_servico",
+      "parentId": "fld_historico_servicos",
+      "created": 1668677140000,
+      "modified": 1668677140000,
+      "name": "Create HistoricoServico",
+      "method": "POST",
+      "url": "{{ base_url }}/historicoservicos",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{  \"clienteId\": <Cliente ID>,  \"servicoId\": <Servico ID>,  \"data\": \"<YYYY-MM-DD>\",  \"valor\": <Valor do Serviço>}"
+      },
+      "_type": "request"
+    }
+  ]
+}

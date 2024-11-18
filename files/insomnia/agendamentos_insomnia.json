@@ -1,0 +1,131 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-11-17T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.7.0",
+  "resources": [
+    {
+      "_id": "wrk_123456789",
+      "created": 1699500000000,
+      "description": "Coleção para API de Agendamentos",
+      "modified": 1699500000000,
+      "name": "Barbearia API",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_123456789",
+      "parentId": "wrk_123456789",
+      "modified": 1699500000000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080/api"
+      },
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_123456789",
+      "parentId": "wrk_123456789",
+      "created": 1699500000000,
+      "modified": 1699500000000,
+      "name": "Agendamentos",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_get_all_agendamentos",
+      "parentId": "fld_123456789",
+      "created": 1699500000000,
+      "modified": 1699500000000,
+      "name": "Get All Agendamentos",
+      "method": "GET",
+      "url": "{{ base_url }}/agendamentos",
+      "headers": [],
+      "body": {},
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_agendamento_by_id",
+      "parentId": "fld_123456789",
+      "created": 1699500000000,
+      "modified": 1699500000000,
+      "name": "Get Agendamento by ID",
+      "method": "GET",
+      "url": "{{ base_url }}/agendamentos/:id",
+      "headers": [],
+      "body": {},
+      "parameters": [
+        {
+          "name": "id",
+          "value": "1",
+          "id": "param_123"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_create_agendamento",
+      "parentId": "fld_123456789",
+      "created": 1699500000000,
+      "modified": 1699500000000,
+      "name": "Create Agendamento",
+      "method": "POST",
+      "url": "{{ base_url }}/agendamentos",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"dataHora\": \"2024-11-18T10:00:00\",\n  \"duracao\": 30,\n  \"status\": \"CONFIRMADO\",\n  \"observacoes\": \"Barba e cabelo\",\n  \"dataHoraConfirmacao\": \"2024-11-17T15:00:00\",\n  \"local\": \"Barbearia Central\",\n  \"pago\": true,\n  \"valorTotal\": 50.0,\n  \"cliente\": { \"id\": 1 },\n  \"barbeiro\": { \"id\": 2 },\n  \"servico\": { \"id\": 3 },\n  \"plano\": { \"id\": 1 }\n}"
+      },
+      "_type": "request"
+    },
+    {
+      "_id": "req_update_agendamento",
+      "parentId": "fld_123456789",
+      "created": 1699500000000,
+      "modified": 1699500000000,
+      "name": "Update Agendamento",
+      "method": "PUT",
+      "url": "{{ base_url }}/agendamentos/:id",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"dataHora\": \"2024-11-19T15:00:00\",\n  \"duracao\": 45,\n  \"status\": \"ALTERADO\",\n  \"observacoes\": \"Corte apenas\",\n  \"local\": \"Barbearia Norte\",\n  \"pago\": false,\n  \"valorTotal\": 30.0\n}"
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "value": "1",
+          "id": "param_123"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_delete_agendamento",
+      "parentId": "fld_123456789",
+      "created": 1699500000000,
+      "modified": 1699500000000,
+      "name": "Delete Agendamento",
+      "method": "DELETE",
+      "url": "{{ base_url }}/agendamentos/:id",
+      "headers": [],
+      "body": {},
+      "parameters": [
+        {
+          "name": "id",
+          "value": "1",
+          "id": "param_123"
+        }
+      ],
+      "_type": "request"
+    }
+  ]
+}

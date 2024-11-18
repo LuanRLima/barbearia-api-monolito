@@ -1,0 +1,2 @@
+Corte de Cabelo, Corte de cabelo masculino, 30.0, 30
+Corte e Barba, Corte de cabelo e barba, 50.0, 60
