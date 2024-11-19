@@ -45,7 +45,7 @@ public class Agendamento {
     @JoinColumn(name = "servico_id")
     private Servico servico;
 
-    @OneToMany(mappedBy = "agendamento")
+    @OneToMany(mappedBy = "agendamento", cascade = CascadeType.REMOVE, orphanRemoval = true)
     private List<Pagamento> pagamentos;
 
     @ManyToOne

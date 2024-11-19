@@ -11,9 +11,6 @@ Este projeto é uma aplicação de **agendamento de serviços** desenvolvida com
     - Lombok
     - Bean Validation (javax.validation)
 
-- **Frontend**:
-    - Angular
-    - Bootstrap (para design responsivo)
 
 ## Funcionalidades
 
@@ -92,6 +89,41 @@ Aqui estão os principais endpoints da API backend:
 - **POST /api/pagamentos**: Criar pagamento de agendamento.
 - **GET /api/pagamentos**: Listar todos os pagamentos.
 - **GET /api/pagamentos/{id}**: Buscar pagamento por ID.
+
+### Serviços
+- **POST /api/servicos**: Criar um novo serviço.
+- **GET /api/servicos**: Listar todos os serviços.
+- **GET /api/servicos/{id}**: Buscar serviço por ID.
+- **DELETE /api/servicos/{id}**: Deletar serviço por ID.
+- **PUT /api/servicos/{id}**: Atualizar serviço por ID.
+
+## Assinaturas
+- **POST /api/assinaturas**: Criar uma nova assinatura.
+- **GET /api/assinaturas**: Listar todas as assinaturas.
+- **GET /api/assinaturas/{id}**: Buscar assinatura por ID.
+- **DELETE /api/assinaturas/{id}**: Deletar assinatura por ID.
+- **PUT /api/assinaturas/{id}**: Atualizar assinatura por ID.
+
+## Barbeiros
+- **POST /api/barbeiros**: Criar um novo barbeiro.
+- **GET /api/barbeiros**: Listar todos os barbeiros.
+- **GET /api/barbeiros/{id}**: Buscar barbeiro por ID.
+- **DELETE /api/barbeiros/{id}**: Deletar barbeiro por ID.
+- **PUT /api/barbeiros/{id}**: Atualizar barbeiro por ID.
+
+## Planos
+- **POST /api/planos**: Criar um novo plano.
+- **GET /api/planos**: Listar todos os planos.
+- **GET /api/planos/{id}**: Buscar plano por ID.
+- **DELETE /api/planos/{id}**: Deletar plano por ID.
+- **PUT /api/planos/{id}**: Atualizar plano por ID.
+
+## Clientes
+- **POST /api/clientes**: Criar um novo cliente.
+- **GET /api/clientes**: Listar todos os clientes.
+- **GET /api/clientes/{id}**: Buscar cliente por ID.
+- **DELETE /api/clientes/{id}**: Deletar cliente por ID.
+- **PUT /api/clientes/{id}**: Atualizar cliente por ID
 
 ## Como Contribuir
 

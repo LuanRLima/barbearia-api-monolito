@@ -21,12 +21,12 @@ public class Servico {
     private Double preco;
     private Integer duracao;
 
-    @OneToMany(mappedBy = "servico")
+    @OneToMany(mappedBy = "servico", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Agendamento> agendamentos;
 
     @ManyToMany(mappedBy = "servicosInclusos")
     private List<Plano> planos;
 
-    @OneToMany(mappedBy = "servico")
+    @OneToMany(mappedBy = "servico", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<HistoricoServico> historicos;
 }
